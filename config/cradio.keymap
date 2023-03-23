@@ -80,7 +80,7 @@
             &kp LALT   &kp LGUI   &kp LSHFT  &kp LCTRL &kp RALT        &kp LARW  &kp DARW  &kp UARW    &kp RARW    &kp DEL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  UNDO    │  CUT     │  COPY    │  PASTE   │          │   │ PAGE DOWN│  BSPC    │  TAB     │  MENU    │  ENTER   │
-            &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans         &kp PG_DN  &kp BSPC   &kp TAB    &kp MENU  &kp ENTER
+            &kp LC(z)  &kp LC(x)  &kp LC(c)  &kp LC(v)  &trans         &kp PG_DN  &kp BSPC   &kp TAB    &kp MENU  &kp ENTER
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &key_repeat    &kp ENTER  &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
