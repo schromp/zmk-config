@@ -64,7 +64,7 @@
         //│ %        │  &       │  }       │  )       │  ]       │   │  0       │ 1        │ 2        │ 3        │ /        │
            &kp PRCNT   &kp AMPS   &kp RBRC   &kp RPAR   &kp RBKT       &kp N0     &kp N1     &kp N2     &kp N3     &kp SLASH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                             &trans     &trans         &key_repeat &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -82,7 +82,7 @@
         //│  UNDO    │  CUT     │  COPY    │  PASTE   │          │   │ PAGE DOWN│  BSPC    │  TAB     │          │  ENTER   │
             &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans         &kp PG_DN  &kp BSPC   &kp TAB    &trans    &kp ENTER
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &key_repeat    &kp ENTER  &trans
+                                             &trans     &trans        &kp ENTER  &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
