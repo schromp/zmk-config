@@ -40,7 +40,7 @@
             &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ' "      │
-        &ht LSHFT A    &lp S      &kp D      &kp F      &kp G          &kp H      &kp J     &kp K     &kp L      &ht RSHFT SQT
+        &ht LSHFT A    &kp S      &kp D      &kp F      &kp G          &kp H      &kp J     &kp K     &kp L      &ht RSHFT SQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
@@ -54,7 +54,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ LGUI     │  1       │  2       │  3       │ INSERT   │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │ LGUI     │
-            &kp LGUI   &kp N1     &kp N2     &kp N3     &kp INS         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp LGUI
+            &kp LGUI   &kp N1     &kp N2     &kp N3     &kp INS        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp LGUI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ LCTRL    │  4       │  5       │  6       │ DELETE   │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  RCTRL   │
             &kp LCTRL  &kp N4     &kp N5     &kp N6     &kp DEL        &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp RCTRL
