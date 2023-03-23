@@ -38,8 +38,6 @@
         };
     };
 
-171819
-
     keymap {
         compatible = "zmk,keymap";
         default_layer {
