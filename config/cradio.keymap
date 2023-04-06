@@ -56,21 +56,21 @@
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
-
+	
 	// symbol layer
         right_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ !        │  @       │  #       │  $       │ _        │   │  =       │ 7        │ 8        │  9       │ +        │
-            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp UNDER      &kp EQUAL  &kp N7     &kp N8      &kp N9    &kp PLUS
+        //│ 1        │  2       │  3       │  4       │ 5        │   │  6       │ 7        │ 8        │  9       │ 0        │
+            &kp N1    &kp N2     &kp N3     &kp N4     &kp N5         &kp N6      &kp N7     &kp N8      &kp N9    &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ ;        │  :       │  {       │  (       │ [        │   │ *        │ 4        │ 5        │ 6        │  -       │
-            &kp SEMI   &kp COLON  &kp LBRC   &kp LPAR   &kp LBKT       &kp STAR   &kp N4     &kp N5     &kp N6     &kp MINUS
+        //│ [        │  ]       │  (       │  )       │ _        │   │ -        │ :        │ ;        │ +        │  *       │
+            &kp LBKT   &kp RBKT  &kp LPAR   &kp RPAR   &kp UNDER      &kp MINUS  &kp COLON   &kp SEMI  &kp PLUS   &kp STAR
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ %        │  &       │  }       │  )       │  ]       │   │  0       │ 1        │ 2        │ 3        │ /        │
-           &kp PRCNT   &kp AMPS   &kp RBRC   &kp RPAR   &kp RBKT       &kp N0     &kp N1     &kp N2     &kp N3     &kp SLASH
+        //│ %        │  &       │  {       │  }       │ =        │   │  !       │ @        │ #        │ $        │ ~        │
+           &kp PRCNT   &kp AMPS   &kp LBRC   &kp RBRC   &kp EQUAL      &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp TILDE
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &key_repeat &trans
+                                             &trans     &key_repeat    &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -103,8 +103,8 @@
         //│   PLAY   │ BRI DOWN │ BRI DOWN │  ^       │ |        │   │          │          │          │          │  `       │
         &kp C_PLAY &kp C_BRI_UP &kp C_BRI_DN &kp CARET &kp PIPE        &kp F11    &kp F4     &kp F5     &kp F6     &kp GRAVE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│   PREV   │  NEXT    │ T COPY   │          │  T PASTE │   │          │          │          │          │  \       │
-         &kp C_PREV  &kp C_NEXT   &kp LC(LS(C)) &trans  &kp LC(LS(V))  &kp F10    &kp F1     &kp F2     &kp F3     &kp BSLH
+        //│   PREV   │  NEXT    │ T COPY   │ T PASTE  │          │   │          │          │          │          │  \       │
+         &kp C_PREV  &kp C_NEXT   &kp LC(LS(C)) &kp LC(LS(V)) &trans   &kp F10    &kp F1     &kp F2     &kp F3     &kp BSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
