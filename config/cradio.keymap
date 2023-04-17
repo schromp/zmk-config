@@ -18,6 +18,14 @@
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
+	skq: sticky_key_quick_release {
+		compatible = "zmk,behavior-sticky-key";
+		label = "STICKY_KEY_QUICK_RELEASE";
+		#binding-cells = <1>;
+		bindings = <&kp>;
+		release-after-ms = <1000>;
+		quick-release;
+    };
 
     };
 
@@ -52,7 +60,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &mo 2      &lt 4 SPACE     &sk LSHFT   &mo 1
+                                             &mo 2      &lt 4 SPACE   &skq LSHFT   &mo 1
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
