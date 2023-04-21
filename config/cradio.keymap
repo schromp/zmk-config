@@ -8,7 +8,7 @@
 // umlaute
 #define HOST_OS 1  // set to 1 for Linux, default is 0 (Windows)
 #include helper.h
-#include "../zmk-nodefree-config/international_chars/german.dtsi"
+#include "international_chars/german.dtsi"
 
 / {
     behaviors {
@@ -114,7 +114,7 @@
             &kp F1    &kp F2      &kp F3    &kp F4      &kp F5         &kp F6    &kp F7     &kp F8     &kp F9      &kp F10
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │  ^       │ |        │   │          │          │          │          │  `       │
-            &kp F11   &kp F12     &trans    &kp CARET &kp PIPE        &de_ss    &kp de_ae   &kp de_ue   &kp de_oe  &kp GRAVE
+            &kp F11   &kp F12     &trans    &kp CARET &kp PIPE        &de_eszett &kp de_ae   &kp de_ue   &kp de_oe  &kp GRAVE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│   PREV   │  NEXT    │ T COPY   │ T PASTE  │ Bri down |   │   bri up │   Play   │Vol Down  │  Vol Up  │  \       │
       &kp C_PREV  &kp C_NEXT   &kp LC(LS(C)) &kp LC(LS(V)) &kp C_BRI_DN &kp C_BRI_UP &kp C_PLAY &kp C_VOL_DN &kp C_VOL_UP &kp BSLH
