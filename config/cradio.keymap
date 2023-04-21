@@ -7,8 +7,8 @@
 
 // umlaute
 #define HOST_OS 1  // set to 1 for Linux, default is 0 (Windows)
-#include helper.h
-#include "international_chars/german.dtsi"
+#include "../config/helper.h"
+#include "../config/international_chars/german.dtsi"
 
 / {
     behaviors {
