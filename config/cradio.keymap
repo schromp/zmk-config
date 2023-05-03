@@ -5,6 +5,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#include "../zmk-nodefree-config/international_chars/german.dtsi"
+#include "../zmk-nodefree-config/helper.h"
 
 / {
     behaviors {
@@ -87,7 +89,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ ESC      │          │          │          │          │   │  PAGE UP │  HOME    │  END     │  PRINT   │  CAPS    │
-            &kp ESC   &trans      &trans     &trans     &trans         &kp PG_UP  &kp HOME   &kp END    &kp PSCRN  &kp CAPS
+            &kp ESC   &de_eszett  &kp de_ae  &kp de_ue  &kp de_oe      &kp PG_UP  &kp HOME   &kp END    &kp PSCRN  &kp CAPS
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ LALT     │  MOD     │  SHIFT   │  CTRL    │  RALT    │   │ LEFT     │  DOWN    │  UP      │  RIGHT   │  DELETE  │
             &sk LALT   &sk LGUI   &sk LSHFT  &sk LCTRL &sk RALT        &kp LARW  &kp DARW  &kp UARW    &kp RARW    &kp DEL
