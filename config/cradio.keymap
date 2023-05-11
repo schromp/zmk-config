@@ -77,7 +77,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ ESC      │          │          │          │          │   │  PAGE UP │  HOME    │  END     │  PRINT   │  CAPS    │
-            &trans     &trans    &trans     w&trans     &trans        &kp PG_UP  &kp HOME   &kp END    &kp PSCRN  &kp CAPS
+            &trans     &trans    &trans      &trans     &trans        &kp PG_UP  &kp HOME   &kp END    &kp PSCRN  &kp CAPS
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ LALT     │  MOD     │  SHIFT   │  CTRL    │  RALT    │   │ LEFT     │  DOWN    │  UP      │  RIGHT   │  DELETE  │
             &sk LALT   &sk LGUI   &sk LSHFT  &sk LCTRL &sk RALT        &kp LARW  &kp DARW  &kp UARW    &kp RARW    &kp DEL
