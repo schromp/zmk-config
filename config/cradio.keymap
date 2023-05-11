@@ -5,6 +5,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define col 1
+#define right 2
+#define left 3
+#define tri 4
+
 / {
     behaviors {
         ht: hold_tap {
@@ -30,8 +35,8 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
+            if-layers = <left right>;
+            then-layer = <tri>;
         };
     };
 
@@ -49,10 +54,28 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &sl 2      &lt 4 SPACE   &skq LSHFT   &sl 1
+                                             &sl left   &lt 4 SPACE   &skq LSHFT   &sl right
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
+
+        colemak {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│  Q       │  W       │  F       │  P       │  B       │   │  J       │  L       │  U       │  Y       │  ' "     │
+            &kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y      &kp SQT
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  A       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I       │ O        │
+            &kp A      &kp R      &kp S      &kp T      &kp G          &kp M      &kp N      &kp E      &kp I      &kp O
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , <      │ . >      │ / ?      │
+            &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &sl left  &lt 4 SPACE   &skq LSHFT   &sl right
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
 	
 	// symbol layer
         right_layer {
@@ -76,14 +99,14 @@
         left_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ ESC      │          │          │          │          │   │  PAGE UP │  HOME    │  END     │  PRINT   │  CAPS    │
-            &kp ESC   &trans    &trans      &trans     &trans        &kp PG_UP  &kp HOME   &kp END    &kp PSCRN  &kp CAPS
+        //│ ESC      │          │          │          │          │   │          │ Play     │  Vol-    │   Vol +  │  CAPS    │
+            &kp ESC   &trans    &trans      &trans     &trans          &trans     &kp C_PLAY &kp C_VOL_DN &kp C_VOL_UP  &kp CAPS
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ LALT     │  MOD     │  SHIFT   │  CTRL    │  RALT    │   │ LEFT     │  DOWN    │  UP      │  RIGHT   │  DELETE  │
             &sk LALT   &sk LGUI   &sk LSHFT  &sk LCTRL &sk RALT        &kp LARW  &kp DARW  &kp UARW    &kp RARW    &kp DEL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  UNDO    │  CUT     │  COPY    │  PASTE   │          │   │ PAGE DOWN│  BSPC    │  TAB     │          │  ENTER   │
-            &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans         &kp PG_DN  &kp BSPC   &kp TAB    &trans    &kp ENTER
+        //│  UNDO    │  CUT     │  COPY    │  PASTE   │ Bri Dn   │   │  Bri Up  │  BSPC    │  TAB     │          │  ENTER   │
+            &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V) &kp C_BRI_DN &kp C_BRI_UP  &trans     &kp BSPC   &kp TAB    &trans    &kp ENTER
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans        &kp ENTER  &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -99,46 +122,12 @@
             &kp F1    &kp F2      &kp F3    &kp F4      &kp F5         &kp F6    &kp F7     &kp F8     &kp F9      &kp F10
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │  ^       │ |        │   │          │          │          │          │  `       │
-            &kp F11   &kp F12     &trans    &kp CARET &kp PIPE        &trans     &trans      &trans    &trans     &kp GRAVE
+            &kp F11   &kp F12     &trans    &kp CARET &kp PIPE        &tog col &bt BT_SEL 0 &BT_SEL 1 &BT_CLR 2     &kp GRAVE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│   PREV   │  NEXT    │ T COPY   │ T PASTE  │ Bri down |   │   bri up │   Play   │Vol Down  │  Vol Up  │  \       │
-      &kp C_PREV  &kp C_NEXT   &kp LC(LS(C)) &kp LC(LS(V)) &kp C_BRI_DN &kp C_BRI_UP &kp C_PLAY &kp C_VOL_DN &kp C_VOL_UP &kp BSLH
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼─────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-            >;
-        };
-
-        system_layer {
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │          │          │          │PROFILE 0 │   │colemak   │          │          │          │  RESET   │
-           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &tog 5      &trans     &trans     &trans    &sys_reset
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│          │          │          │PROFILE 1 │   │ qwerty   │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &tog 1     &trans     &trans     &trans    &bootloader
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
-            &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
+        //│   PREV   │  NEXT    │ T COPY   │ T PASTE  │          |   │          │  CLear   │          │          │  \       │
+      &kp C_PREV  &kp C_NEXT   &kp LC(LS(C)) &kp LC(LS(V))  &bootloader &bootloader &BT_CLR  &trans     &trans    &kp BSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-            >;
-        };
-
-        colemak {
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  F       │  P       │  B       │   │  J       │  L       │  U       │  Y       │  ' "     │
-            &kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y      &kp SQT
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I       │ O        │
-            &kp A      &kp R      &kp S      &kp T      &kp G          &kp M      &kp N      &kp E      &kp I      &kp O
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , <      │ . >      │ / ?      │
-            &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &sl 2      &lt 4 SPACE   &skq LSHFT   &sl 1
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
