@@ -122,7 +122,7 @@
             &kp F1    &kp F2      &kp F3    &kp F4      &kp F5         &kp F6    &kp F7     &kp F8     &kp F9      &kp F10
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │  ^       │ |        │   │          │          │          │          │  `       │
-            &kp F11   &kp F12     &trans    &kp CARET &kp PIPE        &tog L_COL   &bt BT_SEL 0 &BT_SEL 1 &BT_SEL 2 &kp GRAVE
+            &kp F11   &kp F12     &trans    &kp CARET &kp PIPE        &tog L_COL   &BT_SEL 0 &BT_SEL 1 &BT_SEL 2 &kp GRAVE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│   PREV   │  NEXT    │ T COPY   │ T PASTE  │          |   │          │  CLear   │          │          │  \       │
       &kp C_PREV  &kp C_NEXT   &kp LC(LS(C)) &kp LC(LS(V))  &bootloader &bootloader &BT_CLR  &trans     &trans    &kp BSLH
