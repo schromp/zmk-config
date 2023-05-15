@@ -106,7 +106,7 @@
             &sk LALT   &sk LGUI   &sk LSHFT  &sk LCTRL &sk RALT        &kp LARW  &kp DARW  &kp UARW    &kp RARW    &kp DEL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  UNDO    │  CUT     │  COPY    │  PASTE   │ Bri Dn   │   │  Bri Up  │  BSPC    │  TAB     │          │  ENTER   │
-            &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V) &kp C_BRI_DN &kp C_BRI_UP  &trans     &kp BSPC   &kp TAB    &trans    &kp ENTER
+            &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V) &kp C_BRI_DN &kp C_BRI_UP &kp BSPC   &kp TAB    &trans    &kp ENTER
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans        &kp ENTER  &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
