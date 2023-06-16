@@ -124,8 +124,8 @@
         //│          │          │          │  ^       │ |        │   │          │          │          │          │  `       │
             &kp F11   &kp F12     &trans    &kp CARET &kp PIPE        &tog L_COL   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp GRAVE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│   PREV   │  NEXT    │ T COPY   │ T PASTE  │          |   │          │  CLear   │          │          │  \       │
-      &kp C_PREV  &kp C_NEXT   &kp LC(LS(C)) &kp LC(LS(V))  &bootloader &bootloader &bt BT_CLR  &trans     &trans    &kp BSLH
+        //│   PREV   │  NEXT    │ T COPY   │ T PASTE  │          |   │          │  CLear   │  out tog │          │  \       │
+      &kp C_PREV  &kp C_NEXT   &kp LC(LS(C)) &kp LC(LS(V))  &bootloader &bootloader &bt BT_CLR  &out OUT_TOG &trans &kp BSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
