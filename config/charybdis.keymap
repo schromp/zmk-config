@@ -35,7 +35,7 @@
 &kp LSHFT  &kp G   &kp A   &kp S             &kp D      &kp F           &trans  &trans  &trans  &trans  &trans  &trans
 &kp SPACE  &kp Z   &kp X   &kp C             &kp V      &kp B           &trans  &trans  &trans  &trans  &trans  &trans
                            &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_ALT    &trans  &trans
-                                             &to 2      &trans          &trans
+                                              &to 0      &trans          &trans
             >;
         };
 
