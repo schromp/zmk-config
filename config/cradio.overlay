@@ -1,0 +1,23 @@
+// Override the G key (matrix index RC(0,9), 10th input GPIO)
+// from the broken pad pro_micro 1 to nice_nano pad 107 (P1.07)
+&kscan0 {
+    input-gpios
+    = <&pro_micro  7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro 21 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&gpio1 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // G key, was pro_micro 1
+    , <&pro_micro  2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro  3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro  4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro  5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro  6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro  8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro  9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    ;
+};
